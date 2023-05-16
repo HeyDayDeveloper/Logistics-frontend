@@ -6,7 +6,7 @@
       <h2>技术栈</h2>
       <p>前端：Vue,Pinia,Axios,VueRouter,VxeTable,JsMd5,ElementPlus,Echarts,Scss</p>
       <P>后端：Kubernetes,Docker,Spring Cloud,JDK 17 (LTS),SpringBoot 3.0.6,Spring Data JPA,Spring Security,MySQL 8.0,Redis 7.0,Github action</P>
-      <img src="@/assets/imgs/系统总体功能架构.png" alt="">
+      <img src="@/assets/imgs/系统总体功能架构.png" alt=""/>
     </div>
     <div class="about-box acknowledgements">
       <h2>致谢</h2>
