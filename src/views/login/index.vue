@@ -2,15 +2,13 @@
 import { reactive, ref } from "vue"
 import { useRouter } from "vue-router"
 import { useUserStore } from "@/store/modules/user"
-import { User, Lock, Key, Picture, Loading } from "@element-plus/icons-vue"
+import { User, Lock, Key } from "@element-plus/icons-vue"
 import ThemeSwitch from "@/components/ThemeSwitch/index.vue"
 import { type FormInstance, FormRules, ElMessage } from "element-plus"
 // import { getLoginCodeApi } from "@/api/login"
 import { type ILoginRequestData } from "@/api/login/types/login"
 import Validation from "./c-cpn/Validation.vue"
 
-import md5 from "js-md5"
-import { fa } from "element-plus/es/locale"
 const isLogin = ref(true)
 const router = useRouter()
 const loginFormRef = ref<FormInstance | null>(null)
@@ -112,6 +110,7 @@ const handleRegister = () => {
               username: registerForm.username,
               password: registerForm.password
             })
+            router.push({ path: "/" })
           })
           .catch(() => {
             changeImageCode()

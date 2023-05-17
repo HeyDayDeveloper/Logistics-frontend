@@ -5,7 +5,7 @@ import { NotTokenRequest } from "@/utils/service"
 
 // 注册
 export function registerApi(data: any) {
-  return request({
+  return NotTokenRequest({
     url: "/user/register",
     method: "post",
     data

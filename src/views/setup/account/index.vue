@@ -7,9 +7,9 @@ import { Search, Refresh, CirclePlus, Delete, Download, RefreshRight } from "@el
 import { usePagination } from "@/hooks/usePagination"
 import { useUserListStore } from "@/store/modules/userList"
 
-defineOptions({
-  name: "ElementPlus"
-})
+// defineOptions({
+//   name: "ElementPlus"
+// })
 
 const loading = ref<boolean>(false)
 const { paginationData, handleCurrentChange, handleSizeChange } = usePagination()
@@ -23,6 +23,7 @@ let formData: any = reactive({
     "https://s1-imfile.feishucdn.com/static-resource/v1/v2_ce5552ab-e236-48a9-866d-fb6eab1e154g~?image_size=noop&cut_type=&quality=&format=image&sticker_format=.webp",
   email: "",
   nickname: "",
+  username: "",
   phone_number: "",
   birth: "",
   sex: true
@@ -40,6 +41,7 @@ const handleCreate = () => {
         getTableData()
       } else {
         delete formData!.password
+        delete formData!.username
         formData = { id: currentUpdateId.value, ...formData }
         console.log(formData)
         const res = await useUserListStore().updateUserList(formData)
@@ -57,6 +59,7 @@ const resetForm = () => {
   currentUpdateId.value = undefined
   formData.email = ""
   formData.nickname = ""
+  formData.username = ""
   formData.phone_number = ""
   formData.birth = ""
   formData.sex = true
@@ -69,6 +72,7 @@ const currentUpdateId = ref<undefined | string>(undefined)
 const handleUpdate = (row: any) => {
   currentUpdateId.value = row.id
   formData.email = row.email
+  formData.username = row.username
   formData.nickname = row.nickname
   formData.phone_number = row.phone_number
   formData.sex = true
@@ -273,6 +277,9 @@ watch([() => paginationData.currentPage, () => paginationData.pageSize], getTabl
       <el-form ref="formRef" :model="formData" label-width="100px" label-position="left">
         <el-form-item prop="nickname" label="昵称">
           <el-input v-model="formData.nickname" placeholder="请输入" />
+        </el-form-item>
+        <el-form-item prop="username" label="账号" v-if="currentUpdateId === undefined">
+          <el-input v-model="formData.username" placeholder="请输入" />
         </el-form-item>
         <el-form-item prop="password" label="密码" v-if="currentUpdateId === undefined">
           <el-input v-model="formData.password" placeholder="请输入" />
