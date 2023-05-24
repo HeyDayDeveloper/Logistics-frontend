@@ -1,7 +1,6 @@
 # Logistics-frontend
 
-基于 V3-Admin-vite 框架撰写的物资管理系统前端
-[Vue-Admin-vite](https://github.com/un-pany/v3-admin-vite)
+基于 [V3-Admin-vite](https://github.com/un-pany/v3-admin-vite) 框架撰写的应急物资管理系统前端
 
 ## 特性
 
@@ -33,46 +32,62 @@
 
 ## 开发
 
-```bash
-# 配置
+### 配置环境
+
 1. 一键安装 .vscode 目录中推荐的插件
 3. node 版本 16+
 4. pnpm 版本 8.x
 
-# 安装依赖
-pnpm i
+安装依赖
 
-# 启动服务
+```shell
+pnpm install
+```
+
+启动服务
+
+```shell
 pnpm dev
 ```
 
 ## 预览
 
-```bash
-# 预览预发布环境
-pnpm preview:stage
+预览预发布环境
 
-# 预览正式环境
+```shell
+pnpm preview:stage
+```
+预览正式环境
+
+```shell
 pnpm preview:prod
 ```
 
 ## 多环境打包
 
-```bash
-# 构建预发布环境
-pnpm build:stage
+构建预发布环境
 
-# 构建正式环境
+```shell
+pnpm build:stage
+```
+
+构建正式环境
+
+```shell
 pnpm build:prod
 ```
 
 ## 代码检查
 
-```bash
-# 代码格式化
-pnpm lint
+代码格式化
 
-# 单元测试
+```shell
+pnpm lint
+```
+
+单元测试
+
+```shell
 pnpm test
 ```
 
