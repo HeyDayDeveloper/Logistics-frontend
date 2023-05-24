@@ -4,7 +4,7 @@ import { ref } from "vue"
 
 const myColor = ["#d0570e", "#d0a00e", "#34da62", "#00e9db", "#00c0e9", "#0096f3", "#33CCFF", "#33FFCC"]
 
-const option = ref<echarts.EChartsCoreOption>({
+const option = ref({
   backgroundColor: "#0e2147",
   title: {
     text: "采购物流信息",
@@ -95,7 +95,7 @@ const option = ref<echarts.EChartsCoreOption>({
       barWidth: 12,
       itemStyle: {
         normal: {
-          color: function (params) {
+          color: function (params: any) {
             const num = myColor.length
             return myColor[params.dataIndex % num]
           }
@@ -127,7 +127,7 @@ const option = ref<echarts.EChartsCoreOption>({
       barWidth: 24,
       itemStyle: {
         normal: {
-          color: function (params) {
+          color: function (params: any) {
             const num = myColor.length
             return myColor[params.dataIndex % num]
           },
@@ -145,7 +145,7 @@ const option = ref<echarts.EChartsCoreOption>({
       symbolSize: 35,
       itemStyle: {
         normal: {
-          color: function (params) {
+          color: function (params: any) {
             const num = myColor.length
             return myColor[params.dataIndex % num]
           },

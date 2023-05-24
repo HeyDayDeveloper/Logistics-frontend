@@ -16,7 +16,7 @@ const appStore = useAppStore()
 const settingsStore = useSettingsStore()
 const userStore = useUserStore()
 const store = useUserStore()
-const info = store.info
+const info: any = store.info
 
 console.log(store.info)
 

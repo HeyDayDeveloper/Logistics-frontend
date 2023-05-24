@@ -7,7 +7,7 @@ const colorList = ["#73DDFF", "#73ACFF", "#FDD56A", "#FDB36A", "#FD866A", "#9E87
 
 const data = DonateData.data[0].data
 
-const option = ref<echarts.EChartsCoreOption>({
+const option = ref({
   title: {
     text: "捐赠数各月份比较",
     x: "center",
@@ -31,7 +31,7 @@ const option = ref<echarts.EChartsCoreOption>({
       hoverOffset: 15,
       itemStyle: {
         normal: {
-          color: function (params) {
+          color: function (params: any) {
             return colorList[params.dataIndex]
           }
         }

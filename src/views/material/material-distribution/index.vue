@@ -15,13 +15,13 @@ const { paginationData } = usePagination()
 
 //#region 查
 const tableData = ref<IGetTableData[]>([])
-const originalData = ref([])
+const originalData: any = ref([])
 // 获取数据
 const getTableData = async () => {
   loading.value = true
   try {
     const res: [] = (await useApplyProductStore().getData()) as []
-    originalData.value = res as []
+    originalData.value = res as any[]
     console.log(res)
     paginationData.total = res.length
     // 前端做分页

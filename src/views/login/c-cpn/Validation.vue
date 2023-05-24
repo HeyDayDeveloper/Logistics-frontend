@@ -5,7 +5,6 @@
 </template>
 
 <script lang="ts">
-import md5 from "js-md5"
 import { toRefs, onMounted, watch, defineComponent } from "vue"
 
 export default defineComponent({
@@ -64,7 +63,7 @@ export default defineComponent({
 
     // 创建图形
     const drawPic = () => {
-      const canvas = document.getElementById("s-canvas")
+      const canvas: any = document.getElementById("s-canvas")
       const ctx = canvas?.getContext("2d")
       ctx.textBaseline = "bottom"
       // 绘制背景
