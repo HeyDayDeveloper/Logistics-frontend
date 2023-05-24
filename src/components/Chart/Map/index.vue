@@ -102,7 +102,7 @@ function drawChina() {
     // 提示
     tooltip: {
       triggerOn: "click",
-      formatter: function (e, t, n) {
+      formatter: function (e: any) {
         return 0.5 == e.value ? e.name + "：捐赠物资" : e.seriesName + "<br />" + e.name + "：" + e.value
       }
     },

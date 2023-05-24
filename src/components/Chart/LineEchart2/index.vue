@@ -2,7 +2,7 @@
 import BaseEchart from "../BaseEchart/index.vue"
 import { ref } from "vue"
 
-const option = ref<echarts.EChartsCoreOption>({
+const option = ref({
   // backgroundColor: "#080b30",
   title: {
     text: "各类物品需求",

@@ -2,7 +2,7 @@
 import BaseEchart from "../BaseEchart/index.vue"
 import { ref } from "vue"
 
-const option = ref<echarts.EChartsCoreOption>({
+const option = ref({
   title: {
     text: "2023年捐赠数量和需求数量对比",
     textStyle: {

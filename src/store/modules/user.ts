@@ -68,7 +68,7 @@ export const useUserStore = defineStore("user", () => {
     return new Promise((resolve, reject) => {
       getUserInfoApi()
         .then((res) => {
-          const data = res.data
+          const data = res.data as any
           info.value = data
           // 验证返回的 roles 是否是一个非空数组
           if (data.type) {
