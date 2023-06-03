@@ -160,8 +160,8 @@ const changeLogin = () => {
     <ThemeSwitch class="theme-switch" />
     <div class="login-card">
       <div class="title">
-        <img src="@/assets/layout/logo.png" />
-        <span>应急物资捐赠系统</span>
+        <img src="@/assets/layout/logo.webp" />
+        <span>应急物资调度系统</span>
       </div>
       <!-- 登录页面 -->
       <div class="loginContent" v-show="isLogin">
