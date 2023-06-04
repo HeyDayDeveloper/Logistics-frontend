@@ -236,7 +236,7 @@ watch([() => paginationData.currentPage, () => paginationData.pageSize], getTabl
     <!-- 新增/修改 -->
     <el-dialog
       v-model="dialogVisible"
-      :title="currentUpdateId === undefined ? '新增物质' : '修改物质'"
+      :title="currentUpdateId === undefined ? '新增物资' : '修改物资'"
       @close="resetForm"
       width="30%"
     >

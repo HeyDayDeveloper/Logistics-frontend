@@ -49,7 +49,7 @@ export const useApplyProductStore = defineStore("applyProduct", () => {
     })
   }
 
-  // 删除物质
+  // 删除物资
   const deleteData = (id: string) => {
     return new Promise((resolve, reject) => {
       deleteApplyProduct(id)

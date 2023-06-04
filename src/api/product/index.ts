@@ -1,6 +1,6 @@
 import { request } from "@/utils/service"
 
-// 获取物质列表
+// 获取物资列表
 export function getProductList() {
   return request({
     url: "product/list",
@@ -8,7 +8,7 @@ export function getProductList() {
   })
 }
 
-// 添加物质
+// 添加物资
 export function addProduct(data: any) {
   return request({
     url: "product/add",
@@ -17,7 +17,7 @@ export function addProduct(data: any) {
   })
 }
 
-// 更新物质
+// 更新物资
 export function updateProduct(data: any) {
   return request({
     url: "product/update",
@@ -25,7 +25,7 @@ export function updateProduct(data: any) {
     data
   })
 }
-// 删除物质
+// 删除物资
 export function deleteProduct(id: string) {
   console.log(id)
 

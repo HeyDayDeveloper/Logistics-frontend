@@ -278,7 +278,7 @@ watch([() => paginationData.currentPage, () => paginationData.pageSize], getTabl
         <el-form-item prop="nickname" label="昵称">
           <el-input v-model="formData.nickname" placeholder="请输入" />
         </el-form-item>
-        <el-form-item prop="username" label="账号" v-if="currentUpdateId === undefined">
+        <el-form-item prop="username" label="用户名" v-if="currentUpdateId === undefined">
           <el-input v-model="formData.username" placeholder="请输入" />
         </el-form-item>
         <el-form-item prop="password" label="密码" v-if="currentUpdateId === undefined">

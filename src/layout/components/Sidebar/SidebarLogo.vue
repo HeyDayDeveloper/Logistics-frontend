@@ -15,8 +15,7 @@ const props = defineProps({
       </router-link>
       <router-link v-else key="expand" to="/">
         <div class="sidebar-box">
-          <img src="@/assets/layout/logo.webp" class="logo" />
-          <span class="text">应急物资系统</span>
+          <span class="text">应急物资调度系统</span>
         </div>
       </router-link>
     </transition>

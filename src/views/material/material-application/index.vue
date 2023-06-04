@@ -184,7 +184,7 @@ watch([() => paginationData.currentPage, () => paginationData.pageSize], getTabl
   <LoadingTips ref="loadingTipsRef" />
   <div class="app-container">
     <el-card v-loading="loading" shadow="never" class="search-wrapper">
-      <div class="title">物质申请</div>
+      <div class="title">物资申请</div>
     </el-card>
     <el-card v-loading="loading" shadow="never">
       <div class="toolbar-wrapper">

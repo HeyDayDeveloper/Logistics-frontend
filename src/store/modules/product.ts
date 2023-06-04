@@ -20,7 +20,7 @@ export const useProductStore = defineStore("product", () => {
     })
   }
 
-  // 添加物质
+  // 添加物资
   const addData = (formData: any) => {
     return new Promise((resolve, reject) => {
       addProduct(formData)
@@ -34,7 +34,7 @@ export const useProductStore = defineStore("product", () => {
     })
   }
 
-  // 修改物质
+  // 修改物资
   const updateData = (data: any) => {
     return new Promise((resolve, reject) => {
       console.log(data)
@@ -49,7 +49,7 @@ export const useProductStore = defineStore("product", () => {
     })
   }
 
-  // 删除物质
+  // 删除物资
   const deleteData = (id: string) => {
     console.log(id)
 
