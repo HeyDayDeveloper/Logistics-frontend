@@ -47,7 +47,7 @@ pnpm install
 启动服务
 
 ```shell
-pnpm dev
+pnpm run dev
 ```
 
 ## 预览
